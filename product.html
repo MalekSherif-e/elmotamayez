@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تفاصيل المنتج | المتميز</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+
+<h2>المتميز</h2>
+
+<span>لكماليات وفرش السيارات</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">الرئيسية</a>
+
+</nav>
+
+</header>
+
+<section style="padding:150px 8% 80px;">
+
+<div id="productDetails"></div>
+
+</section>
+
+<script src="data.js"></script>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const id = Number(params.get("id"));
+
+const product = products.find(p => p.id === id);
+
+const container = document.getElementById("productDetails");
+
+if(product){
+
+container.innerHTML = `
+
+<div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:60px;align-items:center;">
+
+<div>
+
+<img
+src="${product.image}"
+alt="${product.name}"
+style="width:100%;border-radius:25px;box-shadow:0 20px 40px rgba(0,0,0,.45);">
+
+</div>
+
+<div>
+
+<span style="
+display:inline-block;
+background:#e10600;
+padding:8px 18px;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:20px;
+">
+
+${product.category}
+
+</span>
+
+<h1 style="
+font-size:48px;
+margin:20px 0;
+">
+
+${product.name}
+
+</h1>
+
+<h2 style="
+font-size:36px;
+color:#e10600;
+margin-bottom:25px;
+">
+
+${product.price}
+
+</h2>
+
+<p style="
+line-height:2;
+font-size:18px;
+color:#cfcfcf;
+margin-bottom:35px;
+">
+
+${product.description}
+
+</p>
+
+
+<a
+href="https://wa.me/201000223965?text=${encodeURIComponent("مرحبًا، أريد الاستفسار عن " + product.name)}"
+target="_blank"
+class="btn">
+
+<i class="fab fa-whatsapp"></i>
+
+اطلب عبر واتساب
+
+</a>
+
+<a
+href="index.html"
+style="
+display:inline-block;
+margin-right:20px;
+font-size:18px;
+font-weight:bold;
+color:white;
+">
+
+⬅ العودة للرئيسية
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+}else{
+
+container.innerHTML = `
+
+<div style="
+max-width:700px;
+margin:auto;
+text-align:center;
+padding:80px 20px;
+">
+
+<h1 style="
+font-size:70px;
+margin-bottom:20px;
+">
+
+❌
+
+</h1>
+
+<h2 style="
+margin-bottom:20px;
+">
+
+المنتج غير موجود
+
+</h2>
+
+<p style="
+color:#bbb;
+margin-bottom:35px;
+">
+
+قد يكون هذا المنتج غير متوفر أو تم حذفه.
+
+</p>
+
+<a
+href="index.html"
+class="btn">
+
+العودة للرئيسية
+
+</a>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>

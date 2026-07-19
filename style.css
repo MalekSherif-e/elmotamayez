@@ -1,0 +1,975 @@
+/* =====================================================
+   EL-MOTAMAYEZ
+   STYLE.CSS - PART 1
+   Reset • Navbar • Hero • Search • Categories
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Cairo",sans-serif;
+
+    background:#080808;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d60000;
+
+    border-radius:20px;
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* Sections */
+
+section{
+
+    padding:90px 8%;
+
+}
+
+/* ===================================
+            NAVBAR
+=================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:100%;
+
+    padding:18px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:1000;
+
+    transition:.35s;
+
+}
+
+.logo h2{
+
+    color:#e10600;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.logo span{
+
+    color:#cfcfcf;
+
+    font-size:13px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#e10600;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    right:0;
+
+    width:0;
+
+    height:2px;
+
+    background:#e10600;
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===================================
+              HERO
+=================================== */
+
+.hero{
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
+
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+    animation:fadeUp .9s;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    line-height:1.3;
+
+}
+
+.hero p{
+
+    color:#d4d4d4;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 42px;
+
+    background:#e10600;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(225,6,0,.30);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#ff2222;
+
+    box-shadow:0 0 40px rgba(225,6,0,.50);
+
+}
+
+/* ===================================
+             SEARCH
+=================================== */
+
+.search{
+
+    background:#0f0f0f;
+
+}
+
+.search input{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:#191919;
+
+    color:#fff;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.search input:focus{
+
+    box-shadow:0 0 20px rgba(225,6,0,.35);
+
+}
+
+/* ===================================
+           CATEGORIES
+=================================== */
+
+.categories{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.categories button{
+
+    border:none;
+
+    padding:14px 30px;
+
+    background:#191919;
+
+    color:#fff;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.categories button:hover,
+
+.categories .active{
+
+    background:#e10600;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(225,6,0,.35);
+
+}
+
+/* ===================================
+          SECTION TITLE
+=================================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:45px;
+
+    margin-bottom:10px;
+
+}
+
+.section-title p{
+
+    color:#aaa;
+
+    font-size:18px;
+
+}
+
+/* =====================================================
+   EL-MOTAMAYEZ
+   STYLE.CSS - PART 2
+   Products • Features • About • Contact
+===================================================== */
+
+/* ===================================
+             PRODUCTS
+=================================== */
+
+.products{
+
+    background:#0b0b0b;
+
+}
+
+.products-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.product-card{
+
+    background:#141414;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(225,6,0,.28);
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.product-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.product-info{
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.product-info h3{
+
+    font-size:24px;
+
+}
+
+.product-info p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    min-height:60px;
+
+}
+
+.price{
+
+    color:#ff2d2d;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.product-btn{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    background:#e10600;
+
+    color:#fff;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.product-btn:hover{
+
+    background:#ff2323;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===================================
+            FEATURES
+=================================== */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    background:#101010;
+
+}
+
+.feature{
+
+    background:#181818;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.feature:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(225,6,0,.25);
+
+}
+
+.feature i{
+
+    font-size:50px;
+
+    color:#e10600;
+
+    margin-bottom:20px;
+
+}
+
+.feature h3{
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.feature p{
+
+    color:#bbb;
+
+    line-height:1.8;
+
+}
+
+/* ===================================
+              ABOUT
+=================================== */
+
+.about{
+
+    background:#0d0d0d;
+
+    text-align:center;
+
+}
+
+.about p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:#cfcfcf;
+
+    line-height:2.2;
+
+    font-size:19px;
+
+}
+
+/* ===================================
+             CONTACT
+=================================== */
+
+.contact{
+
+    background:#111;
+
+}
+
+.contact-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#181818;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(225,6,0,.25);
+
+}
+
+.card i{
+
+    font-size:48px;
+
+    color:#e10600;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.card p,
+
+.card a{
+
+    color:#ddd;
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   EL-MOTAMAYEZ
+   STYLE.CSS - PART 3
+   Footer • WhatsApp • Animations • Responsive
+===================================================== */
+
+/* ===================================
+               FOOTER
+=================================== */
+
+footer{
+
+    background:#050505;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p{
+
+    color:#999;
+
+    font-size:15px;
+
+}
+
+/* ===================================
+          WHATSAPP BUTTON
+=================================== */
+
+.whatsapp{
+
+    position:fixed;
+
+    left:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:34px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.15) rotate(10deg);
+
+}
+
+/* ===================================
+            ANIMATIONS
+=================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-content{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.product-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.feature{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.card{
+
+    animation:fadeUp 1s ease;
+
+}
+
+/* Smooth hover */
+
+.product-card,
+.feature,
+.card,
+.btn,
+.product-btn,
+.categories button{
+
+    transition:.35s;
+
+}
+
+/* ===================================
+          MOBILE (900px)
+=================================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:18px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.hero{
+
+    padding:0 25px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.products-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ===================================
+          MOBILE (600px)
+=================================== */
+
+@media(max-width:600px){
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+.logo span{
+
+    font-size:11px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+.section-title p{
+
+    font-size:16px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.search input{
+
+    font-size:16px;
+
+}
+
+.categories{
+
+    gap:10px;
+
+}
+
+.categories button{
+
+    padding:12px 20px;
+
+    font-size:14px;
+
+}
+
+.product-card img{
+
+    height:220px;
+
+}
+
+.price{
+
+    font-size:24px;
+
+}
+
+.whatsapp{
+
+    width:58px;
+
+    height:58px;
+
+    font-size:28px;
+
+    left:18px;
+
+    bottom:18px;
+
+}
+
+}
+
+/* ===================================
+             END
+=================================== */
