@@ -1,10 +1,8 @@
 /* =====================================================
    EL-MOTAMAYEZ
-   STYLE.CSS - PART 1
-   Reset • Navbar • Hero • Search • Categories
-===================================================== */
-
-/* RESET */
+   STYLE.CSS
+   PART 1
+=====================================================*/
 
 *{
     margin:0;
@@ -35,25 +33,21 @@ body{
 
 ::-webkit-scrollbar-thumb{
     background:#e10600;
-    border-radius:20px;
+    border-radius:30px;
 }
-
-/* Links */
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
-
-/* Sections */
 
 section{
     padding:90px 8%;
 }
 
-/* =====================================================
-                        NAVBAR
-===================================================== */
+/* =========================
+        NAVBAR
+========================= */
 
 .navbar{
 
@@ -64,21 +58,23 @@ section{
 
     width:100%;
 
+    height:95px;
+
+    padding:0 8%;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding:12px 8%;
-
-    background:rgba(0,0,0,.60);
+    background:rgba(0,0,0,.65);
 
     backdrop-filter:blur(18px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
     z-index:1000;
-
-    transition:.35s;
 
 }
 
@@ -90,29 +86,27 @@ section{
 
     align-items:center;
 
-    flex-shrink:0;
-
 }
 
 .logo img{
 
-    height:110px;
+    height:130px;
 
     width:auto;
 
     display:block;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
 .logo img:hover{
 
-    transform:scale(1.4);
+    transform:scale(1.08);
 
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav{
 
@@ -120,7 +114,7 @@ nav{
 
     align-items:center;
 
-    gap:55px;
+    gap:45px;
 
 }
 
@@ -131,8 +125,6 @@ nav a{
     font-size:18px;
 
     font-weight:700;
-
-    color:#fff;
 
     transition:.3s;
 
@@ -150,9 +142,9 @@ nav a::after{
 
     position:absolute;
 
-    right:0;
-
     bottom:-8px;
+
+    right:0;
 
     width:0;
 
@@ -170,26 +162,31 @@ nav a:hover::after{
 
 }
 
-/* =====================================================
-                        HERO
-===================================================== */
+/* =========================
+          HERO
+========================= */
 
 .hero{
 
     height:100vh;
 
-    background:
-    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
-    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop");
-
-    background-size:cover;
-    background-position:center;
-
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     text-align:center;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
+
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
 
 }
 
@@ -197,7 +194,7 @@ nav a:hover::after{
 
     max-width:850px;
 
-    animation:fadeUp .8s ease;
+    animation:fadeUp .8s;
 
 }
 
@@ -207,13 +204,11 @@ nav a:hover::after{
 
     margin-bottom:20px;
 
-    line-height:1.3;
-
 }
 
 .hero p{
 
-    color:#d5d5d5;
+    color:#d0d0d0;
 
     font-size:22px;
 
@@ -229,11 +224,9 @@ nav a:hover::after{
 
     display:inline-block;
 
-    padding:16px 42px;
+    padding:16px 40px;
 
     background:#e10600;
-
-    color:#fff;
 
     border-radius:50px;
 
@@ -241,27 +234,25 @@ nav a:hover::after{
 
     transition:.35s;
 
-    box-shadow:0 0 25px rgba(225,6,0,.30);
+    box-shadow:0 0 25px rgba(225,6,0,.3);
 
 }
 
 .btn:hover{
 
-    background:#ff2222;
+    background:#ff2d2d;
 
     transform:translateY(-5px);
 
-    box-shadow:0 0 40px rgba(225,6,0,.45);
-
 }
 
-/* =====================================================
-                        SEARCH
-===================================================== */
+/* =========================
+          SEARCH
+========================= */
 
 .search{
 
-    background:#111;
+    background:#101010;
 
 }
 
@@ -269,411 +260,247 @@ nav a:hover::after{
 
     width:100%;
 
-    padding:18px 22px;
+    padding:18px 20px;
 
     border:none;
 
-    outline:none;
-
-    border-radius:14px;
+    border-radius:15px;
 
     background:#1a1a1a;
 
-    color:#fff;
+    color:white;
 
     font-size:17px;
-
-    transition:.3s;
 
 }
 
 .search input:focus{
 
-    box-shadow:0 0 20px rgba(225,6,0,.35);
+    outline:none;
 
-}
-
-/* =====================================================
-                     CATEGORIES
-===================================================== */
-
-.categories{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-}
-
-.categories button{
-
-    border:none;
-
-    padding:14px 28px;
-
-    background:#191919;
-
-    color:#fff;
-
-    border-radius:50px;
-
-    cursor:pointer;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-.categories button:hover,
-.categories .active{
-
-    background:#e10600;
-
-    transform:translateY(-3px);
-
-    box-shadow:0 8px 20px rgba(225,6,0,.35);
-
-}
-
-/* =====================================================
-                    SECTION TITLE
-===================================================== */
-
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
-
-}
-
-.section-title h2{
-
-    font-size:44px;
-
-    margin-bottom:10px;
-
-}
-
-.section-title p{
-
-    color:#aaa;
-
-    font-size:18px;
+    box-shadow:0 0 20px rgba(225,6,0,.3);
 
 }
 
 /* =====================================================
    EL-MOTAMAYEZ
    STYLE.CSS - PART 2
-   Products • Features • About • Contact
+   Products • Features • About • Contact • Location
 ===================================================== */
 
-/* ==========================
-        PRODUCTS
-========================== */
+/* PRODUCTS */
 
 .products{
-
     background:#0b0b0b;
-
 }
 
 .products-container{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:35px;
-
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
 .product-card{
-
-    background:#141414;
-
-    border-radius:22px;
-
+    background:#151515;
+    border-radius:20px;
     overflow:hidden;
-
     border:1px solid rgba(255,255,255,.08);
-
     transition:.35s;
-
 }
 
 .product-card:hover{
-
-    transform:translateY(-12px);
-
+    transform:translateY(-10px);
     border-color:#e10600;
-
-    box-shadow:0 20px 45px rgba(225,6,0,.28);
-
+    box-shadow:0 15px 40px rgba(225,6,0,.25);
 }
 
 .product-card img{
-
     width:100%;
-
-    height:180px;
-
-    object-fit:cover;
-
-    transition:.4s;
-
+    height:220px;
+    object-fit:contain;
+    background:#0f0f0f;
+    padding:15px;
+    transition:.35s;
 }
 
 .product-card:hover img{
-
-    transform:scale(1.08);
-
+    transform:scale(1.05);
 }
 
 .product-info{
-
-    padding:25px;
-
+    padding:22px;
 }
 
 .product-info h3{
-
     font-size:24px;
-
-    margin-bottom:15px;
-
+    margin-bottom:12px;
 }
 
 .price{
-
-    color:#ff2d2d;
-
+    color:#e10600;
     font-size:28px;
-
     font-weight:800;
-
     margin-bottom:15px;
-
 }
 
 .product-info p{
-
     color:#bdbdbd;
-
     line-height:1.8;
-
     margin-bottom:20px;
-
 }
 
 .product-btn{
-
     display:block;
-
     text-align:center;
-
     background:#e10600;
-
     color:#fff;
-
     padding:15px;
-
     border-radius:12px;
-
     font-weight:700;
-
     transition:.3s;
-
 }
 
 .product-btn:hover{
-
     background:#ff2d2d;
-
     transform:translateY(-3px);
-
 }
 
-/* ==========================
-        FEATURES
-========================== */
+/* FEATURES */
 
 .features{
-
     background:#101010;
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
     gap:30px;
-
 }
 
 .feature{
-
     background:#181818;
-
-    border-radius:20px;
-
     padding:35px;
-
+    border-radius:20px;
     text-align:center;
-
-    border:1px solid rgba(255,255,255,.06);
-
+    border:1px solid rgba(255,255,255,.08);
     transition:.35s;
-
 }
 
 .feature:hover{
-
     transform:translateY(-10px);
-
     border-color:#e10600;
-
-    box-shadow:0 18px 35px rgba(225,6,0,.25);
-
+    box-shadow:0 20px 35px rgba(225,6,0,.22);
 }
 
 .feature i{
-
-    font-size:50px;
-
+    font-size:48px;
     color:#e10600;
-
-    margin-bottom:20px;
-
+    margin-bottom:18px;
 }
 
 .feature h3{
-
+    margin-bottom:12px;
     font-size:24px;
-
-    margin-bottom:15px;
-
 }
 
 .feature p{
-
     color:#bbb;
-
     line-height:1.8;
-
 }
 
-/* ==========================
-          ABOUT
-========================== */
+/* ABOUT */
 
 .about{
-
     background:#0d0d0d;
-
     text-align:center;
-
 }
 
 .about p{
-
     max-width:900px;
-
     margin:auto;
-
-    font-size:19px;
-
-    color:#cfcfcf;
-
+    color:#ccc;
     line-height:2.2;
-
+    font-size:19px;
 }
 
-/* ==========================
-         CONTACT
-========================== */
+/* CONTACT */
 
 .contact{
-
     background:#111;
-
 }
 
 .contact-cards{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
     gap:30px;
-
 }
 
 .card{
-
     background:#181818;
-
     border-radius:20px;
-
     padding:35px;
-
     text-align:center;
-
     border:1px solid rgba(255,255,255,.08);
-
     transition:.35s;
-
 }
 
 .card:hover{
-
     transform:translateY(-10px);
-
     border-color:#e10600;
-
-    box-shadow:0 20px 40px rgba(225,6,0,.25);
-
+    box-shadow:0 20px 40px rgba(225,6,0,.22);
 }
 
 .card i{
-
     font-size:48px;
-
     color:#e10600;
-
-    margin-bottom:20px;
-
+    margin-bottom:18px;
 }
 
 .card h3{
-
     font-size:24px;
-
     margin-bottom:12px;
-
 }
 
 .card p,
 .card a{
-
     color:#ddd;
-
-    font-size:17px;
-
+    line-height:1.8;
     transition:.3s;
-
 }
 
 .card a:hover{
-
     color:#e10600;
-
 }
+
+/* LOCATION */
+
+.location{
+    background:#0d0d0d;
+}
+
+.location-container{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.location-info h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.location-info p{
+    color:#ccc;
+    line-height:2;
+    margin-bottom:30px;
+}
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:20px;
+}
+
+
 
 /* =====================================================
    EL-MOTAMAYEZ
@@ -681,316 +508,235 @@ nav a:hover::after{
    Footer • WhatsApp • Animations • Responsive
 ===================================================== */
 
-/* ==========================
-          FOOTER
-========================== */
+/* FOOTER */
 
 footer{
-
     background:#050505;
-
     border-top:1px solid rgba(255,255,255,.08);
-
     padding:35px 20px;
-
     text-align:center;
-
 }
 
 footer p{
-
     color:#999;
-
     font-size:15px;
-
     line-height:2;
-
 }
 
 footer strong{
-
     color:#fff;
-
 }
 
-/* ==========================
-      WHATSAPP BUTTON
-========================== */
+/* WHATSAPP */
 
 .whatsapp{
-
     position:fixed;
-
     left:25px;
-
     bottom:25px;
-
     width:65px;
-
     height:65px;
-
     border-radius:50%;
-
     background:#25D366;
-
     color:#fff;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     font-size:34px;
-
-    box-shadow:0 12px 25px rgba(0,0,0,.35);
-
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
     z-index:999;
-
     transition:.35s;
-
 }
 
 .whatsapp:hover{
-
-    transform:scale(1.15);
-
+    transform:scale(1.12);
 }
 
-/* ==========================
-        ANIMATIONS
-========================== */
+/* ANIMATIONS */
 
 @keyframes fadeUp{
 
     from{
-
         opacity:0;
-
         transform:translateY(40px);
-
     }
 
     to{
-
         opacity:1;
-
         transform:translateY(0);
-
     }
 
 }
 
-.hero-content{
-
-    animation:fadeUp .8s ease;
-
-}
-
-.product-card{
-
-    animation:fadeUp .8s ease;
-
-}
-
-.feature{
-
-    animation:fadeUp .9s ease;
-
-}
-
-.card{
-
-    animation:fadeUp 1s ease;
-
-}
-
-/* Smooth transitions */
-
+.hero-content,
 .product-card,
 .feature,
 .card,
-.btn,
-.product-btn,
-.categories button,
-nav a{
-
-    transition:.35s;
-
+.location-info{
+    animation:fadeUp .8s ease;
 }
 
-/* ==========================
-      RESPONSIVE 900px
-========================== */
+.btn,
+.product-btn,
+.card,
+.feature,
+.product-card,
+nav a{
+    transition:.35s;
+}
 
-@media(max-width:900px){
+/* ===========================
+        TABLET
+=========================== */
+
+@media(max-width:992px){
 
 .navbar{
-
+    height:auto;
+    padding:15px 5%;
     flex-direction:column;
-
-    justify-content:center;
-
-    gap:20px;
-
-    padding:15px;
-
+    gap:15px;
 }
 
 .logo img{
-
-    height:80px;
-
+    height:100px;
 }
 
 nav{
-
-    gap:22px;
-
+    gap:20px;
     flex-wrap:wrap;
-
     justify-content:center;
-
-}
-
-nav a{
-
-    font-size:16px;
-
 }
 
 .hero{
-
     padding:0 20px;
-
 }
 
 .hero h1{
-
-    font-size:46px;
-
+    font-size:48px;
 }
 
 .hero p{
-
     font-size:18px;
-
 }
 
 .products-container,
 .features,
-.contact-cards{
-
+.contact-cards,
+.location-container{
     grid-template-columns:1fr;
+}
 
+.location-info{
+    text-align:center;
+}
+
+.map iframe{
+    height:350px;
 }
 
 }
 
-/* ==========================
-      RESPONSIVE 600px
-========================== */
+/* ===========================
+          MOBILE
+=========================== */
 
 @media(max-width:600px){
 
 section{
+    padding:70px 5%;
+}
 
-    padding:70px 6%;
-
+.navbar{
+    padding:12px 5%;
 }
 
 .logo img{
+    height:80px;
+}
 
-    height:65px;
+nav{
+    gap:14px;
+}
 
+nav a{
+    font-size:15px;
 }
 
 .hero h1{
-
     font-size:34px;
-
 }
 
 .hero p{
-
     font-size:16px;
-
-}
-
-.section-title h2{
-
-    font-size:32px;
-
-}
-
-.section-title p{
-
-    font-size:16px;
-
 }
 
 .btn{
-
     width:100%;
-
     text-align:center;
+}
 
+.section-title h2{
+    font-size:32px;
+}
+
+.section-title p{
+    font-size:16px;
 }
 
 .search input{
-
     font-size:16px;
-
 }
 
 .categories{
-
     gap:10px;
-
 }
 
 .categories button{
-
-    padding:12px 18px;
-
+    padding:10px 18px;
     font-size:14px;
-
 }
 
 .product-card img{
+    height:170px;
+    padding:10px;
+}
 
-    height:220px;
-
+.product-info h3{
+    font-size:22px;
 }
 
 .price{
-
     font-size:24px;
+}
 
+.card{
+    padding:25px;
+}
+
+.card i{
+    font-size:40px;
+}
+
+.location-info h3{
+    font-size:24px;
+}
+
+.map iframe{
+    height:280px;
 }
 
 .whatsapp{
-
-    width:55px;
-
-    height:55px;
-
-    left:18px;
-
-    bottom:18px;
-
+    width:58px;
+    height:58px;
+    left:15px;
+    bottom:15px;
     font-size:28px;
-
 }
 
 footer p{
-
     font-size:14px;
-
 }
 
 }
 
-/* ==========================
-             END
-========================== */
+/* END */
