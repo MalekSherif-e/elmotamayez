@@ -21,17 +21,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <header class="navbar">
 
-<div class="logo">
-    <a href="index.html">
-        <img src="elmotamayez-logo.png" alt="EL-MOTAMAYEZ">
-    </a>
-</div>
+    <div class="logo">
+        <a href="index.html">
+            <img src="elmotamayez-logo.png" alt="EL-MOTAMAYEZ">
+        </a>
+    </div>
 
-<nav>
-
-<a href="index.html">الرئيسية</a>
-
-</nav>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+    </nav>
 
 </header>
 
@@ -57,14 +55,30 @@ if(product){
 
 container.innerHTML = `
 
-<div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:60px;align-items:center;">
+<div style="
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
+align-items:center;
+">
 
-<div>
+<div style="text-align:center;">
 
 <img
 src="${product.image}"
 alt="${product.name}"
-style="width:100%;border-radius:25px;box-shadow:0 20px 40px rgba(0,0,0,.45);">
+style="
+width:100%;
+max-width:380px;
+height:320px;
+object-fit:contain;
+background:#111;
+padding:20px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.45);
+">
 
 </div>
 
@@ -84,8 +98,9 @@ ${product.category}
 </span>
 
 <h1 style="
-font-size:48px;
+font-size:42px;
 margin:20px 0;
+line-height:1.4;
 ">
 
 ${product.name}
@@ -93,7 +108,7 @@ ${product.name}
 </h1>
 
 <h2 style="
-font-size:36px;
+font-size:34px;
 color:#e10600;
 margin-bottom:25px;
 ">
@@ -113,11 +128,11 @@ ${product.description}
 
 </p>
 
-
 <a
 href="https://wa.me/201000223965?text=${encodeURIComponent("مرحبًا، أريد الاستفسار عن " + product.name)}"
 target="_blank"
-class="btn">
+class="btn"
+style="margin-left:15px;">
 
 <i class="fab fa-whatsapp"></i>
 
@@ -129,10 +144,10 @@ class="btn">
 href="index.html"
 style="
 display:inline-block;
-margin-right:20px;
+margin-top:20px;
 font-size:18px;
 font-weight:bold;
-color:white;
+color:#fff;
 ">
 
 ⬅ العودة للرئيسية
@@ -147,13 +162,13 @@ color:white;
 
 }else{
 
-container.innerHTML = `
+container.innerHTML=`
 
 <div style="
 max-width:700px;
 margin:auto;
-text-align:center;
 padding:80px 20px;
+text-align:center;
 ">
 
 <h1 style="
@@ -166,6 +181,7 @@ margin-bottom:20px;
 </h1>
 
 <h2 style="
+font-size:36px;
 margin-bottom:20px;
 ">
 
@@ -175,6 +191,7 @@ margin-bottom:20px;
 
 <p style="
 color:#bbb;
+line-height:2;
 margin-bottom:35px;
 ">
 
